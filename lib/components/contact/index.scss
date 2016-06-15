@@ -1,0 +1,226 @@
+// Import variables before use
+@import '../../scss/variables';
+
+.contact
+{
+    background: url(/images/bg.jpg) center center / cover;
+    padding: 10px;
+}
+
+.container
+{
+    width: 620px;
+    margin: 0 auto;
+    margin: 100px auto;
+}
+
+h1
+{
+    font-size: 36px;
+    max-width: 440px;
+    margin: 0 auto;
+    font-weight: 900;
+    line-height: 1.4;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 70px;
+}
+
+p
+{
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 1.38;
+    color: $app-color-dark;
+    text-align: center
+}
+
+form
+{
+    background: rgba(255,255,255,0.2);
+    padding: 20px 10px;
+}
+
+input, textarea
+{
+    outline: none;
+    border:none;
+    
+}
+
+input:not(.btn-contact)
+{
+    padding: 10px 20px;
+    background-color: #ffffff;
+    width: 100%;
+
+    &.ng-valid:after
+    {
+        content: url("/images/check-icon.png");
+        position: absolute;
+        top: 10px;
+        width: 23px;
+        right: 16px;
+        height: 28px;           
+    }
+}
+
+.form-group
+{
+    width: 48%;
+    margin: 1%;
+    float: left;
+}
+
+textarea
+{
+    margin: 1%;
+    width: 98%;
+    padding: 10px 20px;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder 
+{ 
+    color: #8e8e8e;
+    text-overflow: ellipsis;
+}
+
+input:hover::-webkit-input-placeholder, textarea:hover::-webkit-input-placeholder 
+{ 
+    color: black;
+    text-overflow: ellipsis; 
+}
+
+.btn-contact
+{
+    margin: 0 auto;
+    background: $app-color-primary;
+    padding: 6px 50px;
+    display: block;
+    margin-top: 30px;
+    transition: .1s background ease-in-out;
+}
+
+.btn-contact:hover
+{
+    background: #ff7676;
+}
+
+.btn-contact:disabled
+{
+    opacity: .3;
+}
+
+.btn-contact:disabled:hover
+{
+    background: $app-color-primary;
+}
+
+.custom-alert
+{
+    background-color: rgba(0, 0, 0, 0.2);
+    position: relative;
+    padding: 10px 20px;
+    width: 100%;
+    color: white;
+
+    .alert-icon
+    {
+        position: absolute;
+        left: 20px;
+        top: 16px;
+        width: 30px;
+        height: 30px;
+        border-radius: 999px;
+        background: url(/images/icons.png) rgba(0, 0, 0, 0.2);
+    }
+
+    .check-icon
+    {
+            background-position: 405px 0px;       
+    }
+
+    .exclamation-icon
+    {
+            background-position: 455px 0px;
+    }    
+
+    p
+    {
+        margin:0;
+        display: inline-block;
+        font-size: 18px;
+        font-weight: normal;
+        color: white;
+        line-height: 41px;
+        margin-left: 44px;
+    }
+}
+
+.alert-danger
+{
+    background: #555d60;
+    color: #FFF;
+    padding: 6px 20px;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    margin: 0;
+    position: relative;
+
+    &::after
+    {
+        content: '';
+        position: absolute;
+        left: 20px;
+        top: -10px;
+        width: 0;
+        height: 0;
+        border-left: 10px solid rgba(0, 0, 0, 0);
+        border-right: 10px solid rgba(0, 0, 0, 0);
+        border-bottom: 10px solid #555d60;
+        clear: both;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+     input:not(.btn-contact) {
+          width: 100%;
+          display: inline-block;
+     }
+     textarea
+     {
+        width: 100%;
+     }
+     .contact
+     {
+        padding: 0px;
+        display: inline-block;
+     }
+     .container
+     {
+        width: 100%;
+        padding:0;
+        margin: 10px auto;
+     }
+
+     h1
+     {
+        font-size: 20px;
+        padding:30px;
+        margin-bottom: 0;
+     }
+
+     form
+     {
+        margin:0;
+     }
+
+     .custom-alert p
+     {
+        line-height: 25px;
+        font-size: 18px;
+        text-align: left;
+     }
+ }

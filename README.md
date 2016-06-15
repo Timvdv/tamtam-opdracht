@@ -1,19 +1,12 @@
-## Contains
+## TamTam Front-end opdracht
 
-* Webpack config
-* Sass scaffolding
-* Routing capability
-* Http request demonstration
-* Bootstrap 4 Import
-* RouterChild (GithubUser component)
-* Components
-    * App (app scaffolding)
-    * Home (homepage)
-    * Navbar (menu)
-    * GithubUser (list/item demonstration)
-    * HttpModule (Http call)
-    * Google Map
-    * About (Info about this project)
+Bij deze de opdracht. Dit is mijn eerste website waarbij ik gebruik maak
+van SASS / Angular 2. Waarschijnlijk kunnen er hier en daar wel wat dingen
+beter maar ik ben redelijk tevreden met het resultaat.
+
+Ik heb de opdracht gestart vanuit een simpele boilerplate.
+* https://github.com/shprink/angular2-nobullshit-boilerplate
+
 
 ## Preriquisites
 
@@ -31,15 +24,3 @@
 `npm run devserver`
 
 then open `http://localhost:8080/`
-
-### Dump the dev app
-
-`npm run dumpdev`
-
-### Dump the prod (minified) app
-
-`npm run dumpprod`
-
-## Credit
-
-* https://github.com/AngularClass/angular2-webpack-starter

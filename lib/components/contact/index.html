@@ -1,0 +1,59 @@
+<div class="contact">
+    <div class="container">
+        <h1>
+            We would love to hear from you
+        </h1>
+
+        <div [hidden]="submitted || valid " class="custom-alert">
+            <div class="alert-icon exclamation-icon"> </div>
+            <p>
+                {{form_error}}
+            </p>
+        </div>
+
+        <form [hidden]="submitted" role="form" (ngSubmit)="onSubmit()" #contactForm="ngForm" id="contact">
+            <div class="form-group">
+                <input type="text" placeholder="First name" required
+                  [(ngModel)]="model.first_name" ngControl="first_name"  #first_name="ngForm" >
+                <div [hidden]="first_name.valid || first_name.pristine" class="alert alert-danger">
+                    We need your first name
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input type="text" placeholder="Last name" required
+                  [(ngModel)]="model.last_name" ngControl="last_name"  #last_name="ngForm">
+                <div [hidden]="last_name.valid || last_name.pristine" class="alert alert-danger">
+                    We need your last name
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input type="text" placeholder="Your e-mail address" required
+                  [(ngModel)]="model.email" ngControl="email"  #email="ngForm">
+                <div [hidden]="email.valid || email.pristine" class="alert alert-danger">
+                    Please use a valid email address
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input type="text" placeholder="Your phone number (optional)">
+            </div>
+
+            <div [hidden]="message.valid || message.pristine" class="alert alert-danger">
+                Please enter a message
+            </div>
+            <textarea name="message" cols="15" rows="5" placeholder="Your message..." required
+            [(ngModel)]="model.message" ngControl="message"  #message="ngForm"></textarea>            
+        </form>
+
+        <input (click)="validateForm(contactForm.form)" [hidden]="submitted" type="button" class="button btn-contact" value="Send">
+
+        <div [hidden]="!submitted" class="custom-alert">
+            <div class="alert-icon check-icon"> </div>
+            <p>
+                Thank you, we have received your message.    
+            </p>
+        </div>
+    </div>    
+</div>

@@ -1,22 +1,40 @@
-<nav class="navbar navbar-dark bg-inverse">
+<nav class="navbar desktop">
     <ul class="nav navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['./Home']">
+                <img class="logo" src="/images/logo.png" alt="TamTam Logo">
+            </a>
+        </li>
         <li class="nav-item">
             <a class="nav-link" [routerLink]="['./Home']">Home</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" [routerLink]="['./Http']">Http requests</a>
+            <a class="nav-link" href="#">People</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" [routerLink]="['./DataType']">DataType</a>
+            <a class="nav-link" [routerLink]="['./Contact']">Contact</a>
+        </li>
+    </ul>
+</nav>
+
+<nav class="navbar mobile" [ngClass]="{fixed: showMenu}">
+    <li class="nav-item">
+        <a class="nav-link" [routerLink]="['./Home']">
+            <img class="logo" src="/images/logo.png" alt="TamTam Logo">
+        </a>
+    </li>
+  <button [hidden]="showMenu" (click)="toggleMenu()" class="menu-icon open-menu"></button>
+  <button [hidden]="!showMenu" (click)="toggleMenu()" class="menu-icon close-menu"></button>
+
+    <ul class="nav navbar-nav" [ngClass]="{hide: !showMenu}">
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['./Home']" (click)="toggleMenu()">Home</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" [routerLink]="['./GithubUsers']">GitHub Users</a>
+            <a class="nav-link" href="#" (click)="toggleMenu()">People</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" [routerLink]="['./About']">About</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" [routerLink]="['./Map']">Map</a>
+            <a class="nav-link" [routerLink]="['./Contact']" (click)="toggleMenu()">Contact</a>
         </li>
     </ul>
 </nav>

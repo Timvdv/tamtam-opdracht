@@ -1,0 +1,19 @@
+<div class="instagram-container">
+    <h1>
+        Follow us on Instagram
+    </h1>
+    <h2>
+        @tamtamnl
+    </h2>
+    <div class="masonry-container">
+        <div class="instagram-feed">
+            <div *ngFor="#picture of pictures" class="item">
+                <img src="{{picture.image}}">
+                <p>
+                    {{picture.title}}
+                </p>
+            </div>
+        </div>
+    </div>
+
+</div>

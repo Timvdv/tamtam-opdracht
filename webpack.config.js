@@ -1,8 +1,8 @@
-var path = require('path'),
-    libPath = path.join(__dirname, 'lib'),
-    wwwPath = path.join(__dirname, 'www'),
-    pkg = require('./package.json'),
-    HtmlWebpackPlugin = require('html-webpack-plugin');
+var  path = require('path'),
+        libPath = path.join(__dirname, 'lib'),
+        wwwPath = path.join(__dirname, 'www'),
+        pkg = require('./package.json'),
+        HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -12,7 +12,8 @@ module.exports = {
     },
     output: {
         path: wwwPath,
-        filename: '[name]-[hash:6].js'
+        filename: '[name]-[hash:6].js',
+        publicPath: 'http://localhost:8080/',
     },
     module: {
         loaders: [{

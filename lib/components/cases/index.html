@@ -1,0 +1,19 @@
+<div class="cases">
+    <div class="case" style="background: url({{activeCase.image}}) center center / cover">
+        <h1>
+            {{activeCase.title}}
+        </h1>
+        <div class="controls">
+            <button (click)="slideLeft()" class="left button arrow-left">
+                <img src="images/arrow-left.png" alt="arrow left">
+            </button>
+            <button class="view button btn-text">
+                View case
+            </button>
+            <button (click)="slideRight()" class="right button arrow-right">
+                <img src="images/arrow-right.png" alt="arrow right">
+            </button>
+        </div>
+        <div class="scroll-down" (click)="scrollDown()"></div>
+    </div>
+</div>

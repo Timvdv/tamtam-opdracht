@@ -1,2 +1,36 @@
 // Import variables before use
 @import '../../scss/variables';
+
+.container
+{
+    width: 940px;
+    margin: 0 auto;
+    margin: 100px auto;
+}
+
+h1
+{
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 1.4;
+    color: $app-color-dark;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+p
+{
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 1.38;
+    color: $app-color-dark;
+    text-align: center
+}
+
+@media only screen and (max-width: 960px) {
+
+    .container
+    {
+        width: 100%;
+    }
+}
