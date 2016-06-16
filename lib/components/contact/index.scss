@@ -46,7 +46,6 @@ input, textarea
 {
     outline: none;
     border:none;
-    
 }
 
 input:not(.btn-contact)
@@ -73,10 +72,16 @@ input:not(.btn-contact)
     float: left;
 }
 
-textarea
+.form-group.textarea
 {
     margin: 1%;
     width: 98%;
+    float: left;
+}
+
+textarea
+{
+    width: 100%;
     padding: 10px 20px;
 }
 
@@ -100,21 +105,21 @@ input:hover::-webkit-input-placeholder, textarea:hover::-webkit-input-placeholde
     display: block;
     margin-top: 30px;
     transition: .1s background ease-in-out;
-}
 
-.btn-contact:hover
-{
-    background: #ff7676;
-}
+    &:hover
+    {
+        background: #ff7676;
+    }
 
-.btn-contact:disabled
-{
-    opacity: .3;
-}
+    &:disabled
+    {
+        opacity: .3;
+    }    
 
-.btn-contact:disabled:hover
-{
-    background: $app-color-primary;
+    &:disabled:hover
+    {
+        background: $app-color-primary;
+    }
 }
 
 .custom-alert
@@ -184,20 +189,34 @@ input:hover::-webkit-input-placeholder, textarea:hover::-webkit-input-placeholde
     }
 }
 
+.textarea .alert-danger
+{
+    top: -6px;
+}
+
 @media only screen and (max-width: 425px) {
-     input:not(.btn-contact) {
+    .form-group, .form-group.textarea
+    {
+        width: 100%;
+    }
+
+     input:not(.btn-contact)
+     {
           width: 100%;
           display: inline-block;
      }
+
      textarea
      {
         width: 100%;
      }
+
      .contact
      {
         padding: 0px;
         display: inline-block;
      }
+     
      .container
      {
         width: 100%;

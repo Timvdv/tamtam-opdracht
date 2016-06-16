@@ -11,7 +11,7 @@
             </p>
         </div>
 
-        <form [hidden]="submitted" role="form" (ngSubmit)="onSubmit()" #contactForm="ngForm" id="contact">
+        <form [hidden]="submitted" role="form" (ngSubmit)="onSubmit()" #contactForm="ngForm" id="contact" class="clearfix">
             <div class="form-group">
                 <input type="text" placeholder="First name" required
                   [(ngModel)]="model.first_name" ngControl="first_name"  #first_name="ngForm" >
@@ -40,11 +40,13 @@
                 <input type="text" placeholder="Your phone number (optional)">
             </div>
 
-            <div [hidden]="message.valid || message.pristine" class="alert alert-danger">
-                Please enter a message
+            <div class="form-group textarea">
+                <textarea name="message" cols="15" rows="5" placeholder="Your message..." required
+                    [(ngModel)]="model.message" ngControl="message"  #message="ngForm"></textarea>            
+                <div [hidden]="message.valid || message.pristine" class="alert alert-danger">
+                    Please enter a message
+                </div>
             </div>
-            <textarea name="message" cols="15" rows="5" placeholder="Your message..." required
-            [(ngModel)]="model.message" ngControl="message"  #message="ngForm"></textarea>            
         </form>
 
         <input (click)="validateForm(contactForm.form)" [hidden]="submitted" type="button" class="button btn-contact" value="Send">

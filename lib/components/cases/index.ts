@@ -1,9 +1,11 @@
 /// <reference path="../../../typings/jquery/jquery.d.ts" />
 import {Component, View} from 'angular2/core';
 import * as jQuery from "jquery";
+import {NgStyle} from 'angular2/common';
 
 @Component({
     selector: "cases",
+    directives: [NgStyle],
     styles: [require('!raw!autoprefixer?browsers=last 2 versions!sass!./index.scss')],
     template: require('./index.html')
 })

@@ -1,5 +1,6 @@
 <div class="cases">
-    <div class="case" style="background: url({{activeCase.image}}) center center / cover">
+
+    <div class="case" [ngStyle]="{'background': 'url(' +activeCase.image +') center center / cover'}">
         <h1>
             {{activeCase.title}}
         </h1>

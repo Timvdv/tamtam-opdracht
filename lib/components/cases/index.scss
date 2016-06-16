@@ -17,6 +17,13 @@
     background: $app-color-shade-1;
     color: black;
     text-align: center;
+
+    h1
+    {
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size:50px;
+    }
     
     .controls
     {
@@ -55,21 +62,6 @@
             left: 16px;
             height: 28px;       
         }
-    }
-}
-
-.walibi
-{
-    background: url(images/walibi.jpg) no-repeat center center; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;    
-
-    h1 {
-        text-transform: uppercase;
-        font-weight: bold;
-        font-size:50px;
     }
 }
 
