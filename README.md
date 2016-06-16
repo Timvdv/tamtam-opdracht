@@ -1,9 +1,9 @@
 ## TamTam Front-end opdracht
 
-Bij deze de opdracht. Dit is mijn eerste website waarbij ik gebruik maak
-van SASS / Angular 2 / Typescript. Het was dus nog wel een uidaging, maar ik heb er veel
-van geleerd. Waarschijnlijk kunnen er hier en daar wel wat dingen beter maar ik ben
-redelijk tevreden met het resultaat.
+Dit is mijn eerste website waarbij ik gebruik maak van SASS / Angular 2 / Typescript.
+Het was dus nog wel een uitdaging, maar ik heb er veel van geleerd.
+Waarschijnlijk kunnen er hier en daar wel wat dingen beter maar ik ben
+tevreden met het resultaat.
 
 ## Bekijk de website:
 * [http://timvandevathorst.nl/tamtam](http://timvandevathorst.nl/tamtam)
