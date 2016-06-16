@@ -8,6 +8,9 @@ redelijk tevreden met het resultaat.
 Ik heb de opdracht gestart vanuit een simpele boilerplate.
 * https://github.com/shprink/angular2-nobullshit-boilerplate
 
+## Bekijk de website:
+* [http://timvandevathorst.nl/tamtam](http://timvandevathorst.nl/tamtam)
+
 
 ## Development
 `npm install`

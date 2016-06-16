@@ -12,8 +12,7 @@ module.exports = {
     },
     output: {
         path: wwwPath,
-        filename: '[name]-[hash:6].js',
-        publicPath: 'http://localhost:8080/',
+        filename: '[name]-[hash:6].js'
     },
     module: {
         loaders: [{

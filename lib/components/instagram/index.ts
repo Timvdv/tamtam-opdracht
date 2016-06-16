@@ -15,14 +15,15 @@ export class Instagram {
 
     }
 
-    getInstaFeed() {
-        console.log('[method] getOctocatProfile called', this.http);
+    getInstaFeed()
+    {
         this.http.get('http://timvandevathorst.nl/tamtam/instagram.php').subscribe((response) => {
             this.pictures = response.json();
         });
     }
 
-    ngOnInit() {
+    ngOnInit()
+    {
         this.getInstaFeed();
     }
 }

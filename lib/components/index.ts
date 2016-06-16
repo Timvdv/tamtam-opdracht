@@ -18,12 +18,7 @@ import {RouteConfig, Route, ROUTER_DIRECTIVES} from 'angular2/router';
     new Route({ path: '/contact', component: Contact, name: 'Contact'}),
 ])
 export class App {
-
     constructor() {
 
-    }
-
-    ngOnInit() {
-        console.log('[Component] app running');
     }
 }

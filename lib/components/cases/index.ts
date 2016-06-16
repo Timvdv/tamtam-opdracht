@@ -1,6 +1,9 @@
 /// <reference path="../../../typings/jquery/jquery.d.ts" />
 import {Component, View} from 'angular2/core';
 import * as jQuery from "jquery";
+
+//Safari could not handle variables inside the background property
+//in a style tag thats why I included NgStyle
 import {NgStyle} from 'angular2/common';
 
 @Component({
